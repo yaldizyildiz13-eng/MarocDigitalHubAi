@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarocDigitalHubAi - تعلم الربح من الإنترنت وأدوات الذكاء الاصطناعي</title>
+  <meta name="description" content="تعلم كيف تربح من الإنترنت وتستعمل الذكاء الاصطناعي بسهولة. شروحات للمبتدئين، أدوات AI مجانية، وطرق الربح من الإنترنت." />
+  <meta name="keywords" content="ربح من الإنترنت، ذكاء اصطناعي، أدوات AI، تعلم، مبتدئين، المغرب، MarocDigitalHubAi" />
+  <meta name="author" content="MarocDigitalHubAi" />
+  <meta name="robots" content="index, follow" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="MarocDigitalHubAi - تعلم الربح من الإنترنت" />
+  <meta property="og:description" content="تعلم كيف تربح من الإنترنت وتستعمل الذكاء الاصطناعي بسهولة" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://marocdigitalhubai.com" />
+  <meta property="og:image" content="https://marocdigitalhubai.com/og-image.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MarocDigitalHubAi" />
+  <meta name="twitter:description" content="تعلم الربح من الإنترنت وأدوات الذكاء الاصطناعي" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg2: #0f1528;
+      --bg3: #141b35;
+      --card: #161d36;
+      --accent: #00d4ff;
+      --accent2: #7c3aed;
+      --accent3: #f59e0b;
+      --text: #e8eaf6;
+      --text2: #94a3b8;
+      --border: rgba(0,212,255,0.15);
+      --glow: 0 0 30px rgba(0,212,255,0.2);
+      --radius: 16px;
+      --font: 'Cairo', 'Tajawal', sans-serif;
+    }
+    [data-theme="light"] {
+      --bg: #f0f4ff;
+      --bg2: #e8edf8;
+      --bg3: #dde5f5;
+      --card: #ffffff;
+      --text: #0f172a;
+      --text2: #475569;
+      --border: rgba(124,58,237,0.2);
+      --glow: 0 4px 30px rgba(124,58,237,0.1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+      overflow-x: hidden;
+    }
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ====== AD PLACEHOLDERS ====== */
+    .ad-slot {
+      background: linear-gradient(135deg, rgba(0,212,255,0.05), rgba(124,58,237,0.05));
+      border: 1px dashed rgba(0,212,255,0.3);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text2);
+      font-size: 13px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .ad-slot::before {
+      content: '📢 إعلان';
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 11px;
+      color: var(--text2);
+      opacity: 0.6;
+    }
+    .ad-header { width: 100%; height: 90px; margin: 0; }
+    .ad-in-content { width: 100%; height: 250px; margin: 32px 0; }
+    .ad-sidebar { width: 100%; height: 600px; }
+    .ad-footer { width: 100%; height: 90px; }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,14,26,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.3s;
+    }
+    [data-theme="light"] nav { background: rgba(240,244,255,0.9); }
+    .nav-logo {
+      font-size: 22px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-logo span { color: var(--accent3); -webkit-text-fill-color: var(--accent3); }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--text2);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); background: rgba(0,212,255,0.08); }
+    .nav-controls { display: flex; gap: 10px; align-items: center; }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px 14px;
+      gap: 8px;
+      width: 180px;
+      transition: all 0.2s;
+    }
+    .search-box:focus-within { border-color: var(--accent); width: 220px; box-shadow: var(--glow); }
+    .search-box input {
+      background: none;
+      border: none;
+      outline: none;
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 13px;
+      width: 100%;
+    }
+    .search-box input::placeholder { color: var(--text2); }
+    .theme-btn {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .theme-btn:hover { border-color: var(--accent); transform: scale(1.05); }
+    .hamburger {
+      display: none;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      align-items: center; justify-content: center;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px; left: 0; right: 0;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 16px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.2s;
+    }
+    .mobile-menu a:hover { background: var(--bg3); color: var(--accent); }
+
+    /* ====== LAYOUT ====== */
+    main { padding-top: 70px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .with-sidebar { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+
+    /* ====== HERO ====== */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 60px 0;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0,212,255,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 30%, rgba(124,58,237,0.1) 0%, transparent 70%);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,212,255,0.1);
+      border: 1px solid rgba(0,212,255,0.3);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      animation: fadeInDown 0.6s ease both;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.7s ease 0.1s both;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--text2);
+      margin-bottom: 36px;
+      animation: fadeInUp 0.7s ease 0.2s both;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.7s ease 0.3s both;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: var(--font);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 24px rgba(0,212,255,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,212,255,0.4); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: var(--font);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,212,255,0.05); }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      animation: fadeInUp 0.7s ease 0.4s both;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 28px; font-weight: 900; color: var(--accent); }
+    .stat-label { font-size: 12px; color: var(--text2); }
+
+    /* ====== SECTIONS ====== */
+    section { padding: 80px 0; }
+    .section-header { text-align: center; margin-bottom: 52px; }
+    .section-tag {
+      display: inline-block;
+      background: rgba(0,212,255,0.1);
+      color: var(--accent);
+      border: 1px solid rgba(0,212,255,0.2);
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .section-desc { color: var(--text2); font-size: 16px; max-width: 500px; margin: 0 auto; }
+
+    /* ====== CARDS ====== */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+      transform-origin: right;
+    }
+    .card:hover { border-color: rgba(0,212,255,0.4); transform: translateY(-4px); box-shadow: var(--glow); }
+    .card:hover::before { transform: scaleX(1); transform-origin: left; }
+    .card-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(124,58,237,0.15));
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .card p { color: var(--text2); font-size: 14px; line-height: 1.8; }
+
+    /* ====== BLOG ====== */
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+    .blog-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--glow); border-color: rgba(0,212,255,0.4); }
+    .blog-img {
+      height: 200px;
+      background: linear-gradient(135deg, var(--bg3), var(--bg2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      position: relative;
+    }
+    .blog-cat {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0,212,255,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(0,212,255,0.3);
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .blog-body { padding: 24px; }
+    .blog-meta { display: flex; gap: 12px; color: var(--text2); font-size: 12px; margin-bottom: 10px; }
+    .blog-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; line-height: 1.5; }
+    .blog-body p { color: var(--text2); font-size: 13px; line-height: 1.7; }
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 14px;
+      transition: gap 0.2s;
+    }
+    .blog-card:hover .read-more { gap: 10px; }
+
+    /* ====== AI TOOLS ====== */
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .tool-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .tool-card:hover { transform: translateY(-3px); border-color: rgba(124,58,237,0.5); box-shadow: 0 0 20px rgba(124,58,237,0.15); }
+    .tool-header { display: flex; align-items: center; gap: 14px; }
+    .tool-logo {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+      background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(0,212,255,0.1));
+    }
+    .tool-header h3 { font-size: 17px; font-weight: 700; }
+    .tool-badge {
+      display: inline-block;
+      background: rgba(245,158,11,0.15);
+      color: var(--accent3);
+      border: 1px solid rgba(245,158,11,0.3);
+      padding: 2px 8px;
+      border-radius: 50px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .tool-desc { color: var(--text2); font-size: 13px; flex: 1; line-height: 1.7; }
+    .tool-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(0,212,255,0.1));
+      border: 1px solid rgba(124,58,237,0.3);
+      color: var(--text);
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover { background: linear-gradient(135deg, rgba(124,58,237,0.4), rgba(0,212,255,0.2)); border-color: var(--accent2); }
+
+    /* ====== INCOME METHODS ====== */
+    .income-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .income-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .income-card:hover { transform: translateY(-4px); border-color: rgba(245,158,11,0.4); box-shadow: 0 0 24px rgba(245,158,11,0.1); }
+    .income-num {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--accent3), #ef4444);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .income-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .income-card p { color: var(--text2); font-size: 13px; line-height: 1.8; margin-bottom: 14px; }
+    .difficulty {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text2);
+    }
+    .dots { display: flex; gap: 4px; }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+    }
+    .dot.active { background: var(--accent3); }
+
+    /* ====== NEWSLETTER ====== */
+    .newsletter-section {
+      background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(124,58,237,0.08));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .newsletter-section h2 { font-size: 32px; font-weight: 900; margin-bottom: 12px; }
+    .newsletter-section p { color: var(--text2); margin-bottom: 28px; }
+    .newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+    .newsletter-form input {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-family: var(--font);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .newsletter-form input:focus { border-color: var(--accent); }
+    .newsletter-form input::placeholder { color: var(--text2); }
+
+    /* ====== CONTACT ====== */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .contact-info h2 { font-size: 30px; font-weight: 800; margin-bottom: 16px; }
+    .contact-info p { color: var(--text2); margin-bottom: 28px; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .contact-item-icon {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(124,58,237,0.15));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .contact-form {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text2); }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: var(--font);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,212,255,0.08); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    /* ====== PAGES ====== */
+    .page { display: none; }
+    .page.active { display: block; }
+    .page-header {
+      background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(124,58,237,0.06));
+      border-bottom: 1px solid var(--border);
+      padding: 60px 0 40px;
+      margin-bottom: 60px;
+    }
+    .page-header h1 { font-size: 40px; font-weight: 900; margin-bottom: 10px; }
+    .page-header p { color: var(--text2); }
+
+    /* ====== LEGAL PAGES ====== */
+    .legal-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 48px;
+    }
+    .legal-content h2 { font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--accent); }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content p { color: var(--text2); line-height: 1.9; margin-bottom: 14px; }
+    .legal-content ul { color: var(--text2); padding-right: 20px; line-height: 1.9; margin-bottom: 14px; }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 60px 0 24px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+    .footer-brand h3 {
+      font-size: 22px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .footer-brand p { color: var(--text2); font-size: 14px; line-height: 1.8; }
+    .footer-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 16px; color: var(--text); text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      color: var(--text2);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text2);
+      font-size: 13px;
+    }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { color: var(--text2); text-decoration: none; transition: color 0.2s; }
+    .footer-legal a:hover { color: var(--accent); }
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeInUp 0.6s ease both; }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 900px) {
+      .with-sidebar { grid-template-columns: 1fr; }
+      .ad-sidebar { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links, .search-box { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      .newsletter-form { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
+      .legal-content { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav>
+  <a href="#" class="nav-logo" onclick="showPage('home')">Maroc<span>Digital</span>HubAi</a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')">🏠 الرئيسية</a></li>
+    <li><a href="#" onclick="showPage('blog')">📝 المدونة</a></li>
+    <li><a href="#" onclick="showPage('tools')">🤖 أدوات AI</a></li>
+    <li><a href="#" onclick="showPage('income')">💰 طرق الربح</a></li>
+    <li><a href="#" onclick="showPage('contact')">📞 اتصل بنا</a></li>
+  </ul>
+  <div class="nav-controls">
+    <div class="search-box">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="ابحث هنا..." id="searchInput" />
+    </div>
+    <button class="theme-btn" onclick="toggleTheme()" title="تغيير الثيم">🌙</button>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home');toggleMenu()">🏠 الرئيسية</a>
+  <a href="#" onclick="showPage('blog');toggleMenu()">📝 المدونة</a>
+  <a href="#" onclick="showPage('tools');toggleMenu()">🤖 أدوات AI</a>
+  <a href="#" onclick="showPage('income');toggleMenu()">💰 طرق الربح</a>
+  <a href="#" onclick="showPage('contact');toggleMenu()">📞 اتصل بنا</a>
+</div>
+
+<main>
+
+<!-- =============== HOME PAGE =============== -->
+<div id="page-home" class="page active">
+
+  <!-- Header Ad -->
+  <div class="container" style="padding-top:12px;">
+    <div class="ad-slot ad-header">
+      <!-- Google AdSense: ins class="adsbygoogle" -->
+      <span>728×90 — Header Banner Ad</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">✨ الذكاء الاصطناعي + الربح من الإنترنت</div>
+        <h1>تعلم كيف <span class="highlight">تربح من الإنترنت</span> وتستعمل الذكاء الاصطناعي بسهولة</h1>
+        <p>دروس وشروحات مجانية للمبتدئين — أدوات AI، طرق الربح، ونصائح عملية لبدء مشوارك الرقمي من المغرب وأي مكان في العالم</p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" onclick="showPage('blog')">🚀 ابدأ التعلم</a>
+          <a href="#" class="btn-secondary" onclick="showPage('tools')">🤖 استكشف أدوات AI</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="stat-num">25+</div><div class="stat-label">مقال تعليمي</div></div>
+          <div class="stat"><div class="stat-num">15+</div><div class="stat-label">أداة AI مجانية</div></div>
+          <div class="stat"><div class="stat-num">10+</div><div class="stat-label">طريقة للربح</div></div>
+          <div class="stat"><div class="stat-num">100%</div><div class="stat-label">مجاني</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main 3 Cards -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="cards-grid">
+        <div class="card" onclick="showPage('income')" style="cursor:pointer;">
+          <div class="card-icon">💰</div>
+          <h3>الربح من الإنترنت</h3>
+          <p>اكتشف أفضل طرق الربح من الإنترنت المجربة — من الفريلانس إلى التسويق بالعمولة وإنشاء المحتوى</p>
+        </div>
+        <div class="card" onclick="showPage('tools')" style="cursor:pointer;">
+          <div class="card-icon">🤖</div>
+          <h3>أدوات AI المجانية</h3>
+          <p>قائمة أفضل أدوات الذكاء الاصطناعي التي ستوفر عليك ساعات من العمل وترفع جودة إنتاجيتك</p>
+        </div>
+        <div class="card" onclick="showPage('blog')" style="cursor:pointer;">
+          <div class="card-icon">📚</div>
+          <h3>شروحات للمبتدئين</h3>
+          <p>مقالات مبسطة ودروس تعليمية خطوة بخطوة — مصممة خصيصاً لمن يبدأ من الصفر</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- In-content Ad -->
+  <div class="container">
+    <div class="ad-slot ad-in-content">
+      <span>728×250 — In-Content Ad (AdSense / Adsterra)</span>
+    </div>
+  </div>
+
+  <!-- Latest Blog Posts -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">المدونة</div>
+        <h2 class="section-title">أحدث المقالات</h2>
+        <p class="section-desc">شروحات ومقالات تعليمية يتم تحديثها بشكل منتظم</p>
+      </div>
+      <div class="with-sidebar">
+        <div>
+          <div class="blog-grid" id="homeBlogGrid"></div>
+          <div style="text-align:center; margin-top:32px;">
+            <a href="#" class="btn-secondary" onclick="showPage('blog')">عرض جميع المقالات ←</a>
+          </div>
+        </div>
+        <aside>
+          <div class="ad-slot ad-sidebar">
+            <span>300×600 — Sidebar Ad</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section>
+    <div class="container">
+      <div class="newsletter-section">
+        <div style="font-size:40px; margin-bottom:14px;">📬</div>
+        <h2>اشترك في النشرة الإخبارية</h2>
+        <p>احصل على أحدث المقالات وأفضل أدوات AI مباشرة في بريدك الإلكتروني</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="أدخل بريدك الإلكتروني" />
+          <button class="btn-primary" onclick="subscribeNewsletter()">اشترك الآن</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Ad -->
+  <div class="container" style="padding-bottom:40px;">
+    <div class="ad-slot ad-footer">
+      <span>728×90 — Footer Banner Ad</span>
+    </div>
+  </div>
+
+</div><!-- end home page -->
+
+
+<!-- =============== BLOG PAGE =============== -->
+<div id="page-blog" class="page">
+  <div class="page-header">
+    <div class="container">
+      <h1>📝 المدونة</h1>
+      <p>جميع المقالات والشروحات التعليمية</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="with-sidebar">
+      <div>
+        <div class="ad-slot ad-in-content" style="margin-bottom:32px;">
+          <span>In-Content Ad (AdSense)</span>
+        </div>
+        <div class="blog-grid" id="fullBlogGrid"></div>
+      </div>
+      <aside>
+        <div class="ad-slot ad-sidebar">
+          <span>300×600 — Sidebar Ad</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div style="height:60px;"></div>
+</div>
+
+
+<!-- =============== AI TOOLS PAGE =============== -->
+<div id="page-tools" class="page">
+  <div class="page-header">
+    <div class="container">
+      <h1>🤖 أدوات الذكاء الاصطناعي</h1>
+      <p>أفضل أدوات AI المجانية للمبتدئين</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ad-slot ad-in-content">
+      <span>In-Content Ad</span>
+    </div>
+    <div class="tools-grid" id="toolsGrid" style="margin-top:32px;"></div>
+  </div>
+  <div style="height:60px;"></div>
+</div>
+
+
+<!-- =============== INCOME PAGE =============== -->
+<div id="page-income" class="page">
+  <div class="page-header">
+    <div class="container">
+      <h1>💰 طرق الربح من الإنترنت</h1>
+      <p>أفضل الطرق المجربة للربح من الإنترنت في 2025</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ad-slot ad-in-content">
+      <span>In-Content Ad</span>
+    </div>
+    <div class="section-header" style="margin-top:40px;">
+      <div class="section-tag">نصائح عملية</div>
+      <h2 class="section-title">أساليب الربح المجربة</h2>
+      <p class="section-desc">طرق حقيقية يمكنك البدء بها اليوم بدون رأس مال كبير</p>
+    </div>
+    <div class="income-grid" id="incomeGrid"></div>
+    <div class="ad-slot ad-in-content" style="margin-top:40px;">
+      <span>In-Content Ad</span>
+    </div>
+  </div>
+  <div style="height:60px;"></div>
+</div>
+
+
+<!-- =============== CONTACT PAGE =============== -->
+<div id="page-contact" class="page">
+  <div class="page-header">
+    <div class="container">
+      <h1>📞 اتصل بنا</h1>
+      <p>نحن هنا للمساعدة — تواصل معنا في أي وقت</p>
+    </div>
+  </div>
+  <div class="container" style="padding-bottom:80px;">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>تواصل معنا</h2>
+        <p>هل لديك سؤال أو اقتراح؟ لا تتردد في التواصل معنا. سنرد عليك في أقرب وقت ممكن.</p>
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div>
+            <div style="font-weight:700; margin-bottom:2px;">البريد الإلكتروني</div>
+            <div style="color:var(--text2); font-size:14px;">contact@marocdigitalhubai.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🌍</div>
+          <div>
+            <div style="font-weight:700; margin-bottom:2px;">الموقع</div>
+            <div style="color:var(--text2); font-size:14px;">المغرب — متاح دولياً</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">⏰</div>
+          <div>
+            <div style="font-weight:700; margin-bottom:2px;">وقت الرد</div>
+            <div style="color:var(--text2); font-size:14px;">خلال 24-48 ساعة</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label>الاسم الكامل</label>
+          <input type="text" placeholder="أدخل اسمك" />
+        </div>
+        <div class="form-group">
+          <label>البريد الإلكتروني</label>
+          <input type="email" placeholder="أدخل بريدك الإلكتروني" />
+        </div>
+        <div class="form-group">
+          <label>الموضوع</label>
+          <input type="text" placeholder="موضوع رسالتك" />
+        </div>
+        <div class="form-group">
+          <label>الرسالة</label>
+          <textarea placeholder="اكتب رسالتك هنا..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;" onclick="sendMessage()">📤 إرسال الرسالة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- =============== PRIVACY POLICY =============== -->
+<div id="page-privacy" class="page">
+  <div class="page-header">
+    <div class="container"><h1>⚖️ سياسة الخصوصية</h1><p>آخر تحديث: مايو 2025</p></div>
+  </div>
+  <div class="container" style="padding-bottom:80px;">
+    <div class="legal-content">
+      <h2>1. مقدمة</h2>
+      <p>نحن في MarocDigitalHubAi نأخذ خصوصيتك بجدية تامة. تشرح هذه السياسة كيفية جمع معلوماتك واستخدامها وحمايتها.</p>
+      <h2>2. المعلومات التي نجمعها</h2>
+      <ul>
+        <li>البيانات التي تقدمها عند الاتصال بنا أو الاشتراك في النشرة الإخبارية</li>
+        <li>بيانات التصفح التلقائية مثل عنوان IP ونوع المتصفح</li>
+        <li>ملفات تعريف الارتباط (Cookies) لتحسين تجربة الموقع</li>
+      </ul>
+      <h2>3. ملفات تعريف الارتباط (Cookies)</h2>
+      <p>يستخدم موقعنا ملفات الكوكيز لتحسين الأداء وتخصيص تجربتك. يتضمن ذلك كوكيز من Google Analytics و Google AdSense.</p>
+      <h2>4. الإعلانات (Google AdSense)</h2>
+      <p>يستخدم هذا الموقع Google AdSense لعرض الإعلانات. قد يستخدم Google ملفات الكوكيز لعرض إعلانات بناءً على زياراتك السابقة لهذا الموقع أو مواقع أخرى. يمكنك إلغاء الاشتراك في عرض الإعلانات المخصصة عبر إعدادات الإعلانات من Google.</p>
+      <h2>5. حماية البيانات</h2>
+      <p>نتخذ إجراءات أمنية مناسبة لحماية بياناتك من الوصول غير المصرح به أو الإفصاح أو التغيير أو الإتلاف.</p>
+      <h2>6. حقوقك</h2>
+      <p>يحق لك طلب الوصول إلى بياناتك أو تصحيحها أو حذفها. تواصل معنا عبر صفحة الاتصال.</p>
+      <h2>7. التواصل</h2>
+      <p>للأسئلة المتعلقة بسياسة الخصوصية: contact@marocdigitalhubai.com</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- =============== TERMS OF SERVICE =============== -->
+<div id="page-terms" class="page">
+  <div class="page-header">
+    <div class="container"><h1>⚖️ شروط الخدمة</h1><p>آخر تحديث: مايو 2025</p></div>
+  </div>
+  <div class="container" style="padding-bottom:80px;">
+    <div class="legal-content">
+      <h2>1. القبول بالشروط</h2>
+      <p>باستخدام موقع MarocDigitalHubAi، فإنك توافق على الالتزام بهذه الشروط والأحكام.</p>
+      <h2>2. استخدام الموقع</h2>
+      <ul>
+        <li>يجب استخدام الموقع للأغراض القانونية فقط</li>
+        <li>يُمنع نسخ المحتوى دون إذن مسبق</li>
+        <li>يجب عدم استخدام الموقع لأي نشاط ضار أو احتيالي</li>
+      </ul>
+      <h2>3. حقوق الملكية الفكرية</h2>
+      <p>جميع المحتويات المنشورة على الموقع محمية بحقوق النشر. لا يجوز إعادة نشرها أو توزيعها دون إذن خطي مسبق.</p>
+      <h2>4. إخلاء المسؤولية</h2>
+      <p>المحتوى المقدم على هذا الموقع هو لأغراض تعليمية وإعلامية فقط. لا نضمن تحقيق أي دخل أو نتائج مالية محددة.</p>
+      <h2>5. تحديث الشروط</h2>
+      <p>نحتفظ بحق تعديل هذه الشروط في أي وقت. سيتم الإعلان عن أي تغييرات على الموقع.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- =============== DISCLAIMER =============== -->
+<div id="page-disclaimer" class="page">
+  <div class="page-header">
+    <div class="container"><h1>⚠️ إخلاء المسؤولية</h1></div>
+  </div>
+  <div class="container" style="padding-bottom:80px;">
+    <div class="legal-content">
+      <h2>المحتوى التعليمي</h2>
+      <p>جميع المقالات والشروحات المنشورة على MarocDigitalHubAi هي لأغراض تعليمية وإعلامية فقط.</p>
+      <h2>لا ضمان للربح</h2>
+      <p>لا يضمن هذا الموقع أي دخل أو أرباح مالية. النتائج تختلف من شخص لآخر وتعتمد على عوامل متعددة من بينها الجهد والخبرة والظروف الشخصية.</p>
+      <h2>روابط خارجية</h2>
+      <p>قد يحتوي الموقع على روابط لمواقع خارجية. نحن لسنا مسؤولين عن محتوى هذه المواقع أو سياساتها.</p>
+      <h2>التوصيات</h2>
+      <p>بعض الروابط على هذا الموقع قد تكون روابط تابعة (Affiliate Links). نحن نكشف عن ذلك بشفافية تامة.</p>
+    </div>
+  </div>
+</div>
+
+</main><!-- end main -->
+
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <!-- Footer Ad -->
+  <div class="container" style="margin-bottom:40px;">
+    <div class="ad-slot ad-footer">
+      <span>728×90 — Footer Ad (AdSense / Adsterra)</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>MarocDigitalHubAi</h3>
+        <p>منصتك الأولى لتعلم الربح من الإنترنت وأدوات الذكاء الاصطناعي. شروحات مجانية وعملية للمبتدئين.</p>
+      </div>
+      <div class="footer-col">
+        <h4>الموقع</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">الرئيسية</a></li>
+          <li><a href="#" onclick="showPage('blog')">المدونة</a></li>
+          <li><a href="#" onclick="showPage('tools')">أدوات AI</a></li>
+          <li><a href="#" onclick="showPage('income')">طرق الربح</a></li>
+          <li><a href="#" onclick="showPage('contact')">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>الفئات</h4>
+        <ul>
+          <li><a href="#">الفريلانس</a></li>
+          <li><a href="#">التسويق الرقمي</a></li>
+          <li><a href="#">ChatGPT</a></li>
+          <li><a href="#">إنشاء المحتوى</a></li>
+          <li><a href="#">التجارة الإلكترونية</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>قانوني</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('privacy')">سياسة الخصوصية</a></li>
+          <li><a href="#" onclick="showPage('terms')">شروط الخدمة</a></li>
+          <li><a href="#" onclick="showPage('disclaimer')">إخلاء المسؤولية</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 MarocDigitalHubAi — جميع الحقوق محفوظة</span>
+      <div class="footer-legal">
+        <a href="#" onclick="showPage('privacy')">الخصوصية</a>
+        <a href="#" onclick="showPage('terms')">الشروط</a>
+        <a href="#" onclick="showPage('disclaimer')">إخلاء المسؤولية</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// ============ DATA ============
+const articles = [
+  { emoji: '💰', cat: 'الربح', title: 'كيف تربح 500 دولار شهرياً من الفريلانس للمبتدئين', desc: 'دليل شامل للبدء في العمل الحر من الصفر بدون خبرة سابقة', date: '15 مايو 2025', read: '8 دق' },
+  { emoji: '🤖', cat: 'AI', title: 'أفضل 10 أدوات ChatGPT ستغير طريقة عملك', desc: 'اكتشف أقوى أدوات الذكاء الاصطناعي التي يستخدمها المحترفون يومياً', date: '12 مايو 2025', read: '6 دق' },
+  { emoji: '📊', cat: 'التسويق', title: 'التسويق بالعمولة للمبتدئين: من الصفر إلى أول دولار', desc: 'خطوات عملية لبدء مشروع Affiliate Marketing ناجح', date: '10 مايو 2025', read: '10 دق' },
+  { emoji: '🎨', cat: 'AI', title: 'كيف تستخدم Midjourney لإنشاء صور احترافية ومبيعها', desc: 'طريقة استخدام AI لإنشاء صور وبيعها على منصات متعددة', date: '8 مايو 2025', read: '7 دق' },
+  { emoji: '📝', cat: 'المحتوى', title: 'كتابة محتوى SEO باستخدام الذكاء الاصطناعي في 2025', desc: 'كيف تكتب مقالات تحتل المراتب الأولى في Google بمساعدة AI', date: '5 مايو 2025', read: '9 دق' },
+  { emoji: '🛒', cat: 'التجارة', title: 'Dropshipping من المغرب: دليل البداية الكاملة', desc: 'كيف تبدأ متجراً إلكترونياً بدون مخزون وتربح من أول شهر', date: '3 مايو 2025', read: '11 دق' },
+  { emoji: '📱', cat: 'التواصل', title: 'تحقيق الدخل من TikTok: الاستراتيجيات الفعالة', desc: 'كيف تحول متابعيك إلى مصدر دخل ثابت عبر TikTok', date: '1 مايو 2025', read: '6 دق' },
+  { emoji: '💡', cat: 'مبتدئين', title: '7 مهارات رقمية مطلوبة في سوق العمل 2025', desc: 'المهارات التي يبحث عنها أصحاب العمل والعملاء في عصر AI', date: '28 أبريل 2025', read: '8 دق' },
+  { emoji: '🌐', cat: 'الربح', title: 'كيف تربح من Google AdSense: شروط القبول والنجاح', desc: 'كل ما تحتاج معرفته للحصول على موافقة AdSense وزيادة أرباحك', date: '25 أبريل 2025', read: '12 دق' },
+];
+
+const tools = [
+  { emoji: '🤖', name: 'ChatGPT', badge: 'مجاني', desc: 'أقوى نموذج محادثة للذكاء الاصطناعي — كتابة، برمجة، ترجمة، وأكثر', url: 'https://chat.openai.com' },
+  { emoji: '🎨', name: 'Midjourney', badge: 'مدفوع', desc: 'إنشاء صور فنية احترافية من وصف نصي بسيط', url: 'https://midjourney.com' },
+  { emoji: '✍️', name: 'Claude AI', badge: 'مجاني', desc: 'مساعد ذكاء اصطناعي متقدم للكتابة والتحليل والبرمجة', url: 'https://claude.ai' },
+  { emoji: '🔍', name: 'Perplexity AI', badge: 'مجاني', desc: 'محرك بحث مدعوم بالذكاء الاصطناعي يعطيك إجابات دقيقة', url: 'https://perplexity.ai' },
+  { emoji: '🎬', name: 'Runway ML', badge: 'مجاني', desc: 'إنشاء وتعديل الفيديوهات باستخدام الذكاء الاصطناعي', url: 'https://runwayml.com' },
+  { emoji: '📊', name: 'Gamma.app', badge: 'مجاني', desc: 'إنشاء عروض تقديمية احترافية بالذكاء الاصطناعي في دقائق', url: 'https://gamma.app' },
+  { emoji: '🔊', name: 'ElevenLabs', badge: 'مجاني', desc: 'تحويل النص إلى صوت بشري طبيعي بجودة عالية', url: 'https://elevenlabs.io' },
+  { emoji: '📝', name: 'Notion AI', badge: 'مدفوع', desc: 'مساعد ذكاء اصطناعي مدمج في أداة إدارة المشاريع الشهيرة', url: 'https://notion.so' },
+  { emoji: '💼', name: 'Copy.ai', badge: 'مجاني', desc: 'كتابة محتوى تسويقي وإعلاني احترافي بالذكاء الاصطناعي', url: 'https://copy.ai' },
+  { emoji: '🖼️', name: 'Adobe Firefly', badge: 'مجاني', desc: 'أداة Adobe لإنشاء الصور وتعديلها بالذكاء الاصطناعي', url: 'https://firefly.adobe.com' },
+  { emoji: '🎵', name: 'Suno AI', badge: 'مجاني', desc: 'إنشاء موسيقى وأغاني كاملة بالذكاء الاصطناعي', url: 'https://suno.ai' },
+  { emoji: '🌐', name: 'DeepL', badge: 'مجاني', desc: 'أفضل أداة ترجمة بالذكاء الاصطناعي — أدق من Google Translate', url: 'https://deepl.com' },
+];
+
+const incomeMethods = [
+  { title: 'الفريلانس (العمل الحر)', desc: 'تقديم خدماتك على منصات مثل Fiverr وUpwork. مثالي للمبتدئين في الكتابة، التصميم، البرمجة.', difficulty: 2 },
+  { title: 'التسويق بالعمولة', desc: 'كسب عمولة عند بيع منتجات الآخرين. لا تحتاج منتج خاص بك — فقط رابط وجمهور.', difficulty: 2 },
+  { title: 'إنشاء المحتوى (YouTube/TikTok)', desc: 'بناء قناة أو حساب وتحقيق الدخل من الإعلانات والرعايات والمنتجات الرقمية.', difficulty: 3 },
+  { title: 'بيع الكورسات الأونلاين', desc: 'تحويل معرفتك ومهاراتك إلى كورس ومبيعته على Udemy أو Gumroad.', difficulty: 3 },
+  { title: 'Dropshipping', desc: 'بيع منتجات فيزيائية أونلاين بدون مخزون — الموردون يشحنون مباشرة للعميل.', difficulty: 3 },
+  { title: 'Google AdSense (مدونة/موقع)', desc: 'إنشاء موقع أو مدونة ووضع إعلانات AdSense أو Adsterra لكسب الدخل.', difficulty: 2 },
+  { title: 'خدمات الذكاء الاصطناعي', desc: 'تقديم خدمات AI للشركات مثل كتابة المحتوى، الصور، السكريبتات بمساعدة أدوات AI.', difficulty: 1 },
+  { title: 'بيع المنتجات الرقمية', desc: 'بيع قوالب، أيقونات، ملفات PDF، أدوات رقمية على Etsy أو Gumroad.', difficulty: 2 },
+];
+
+// ============ RENDER FUNCTIONS ============
+function renderBlog(containerId, limit) {
+  const container = document.getElementById(containerId);
+  const items = limit ? articles.slice(0, limit) : articles;
+  container.innerHTML = items.map(a => `
+    <a href="#" class="blog-card" onclick="return false;">
+      <div class="blog-img">${a.emoji}<span class="blog-cat">${a.cat}</span></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span>📅 ${a.date}</span><span>⏱️ ${a.read}</span></div>
+        <h3>${a.title}</h3>
+        <p>${a.desc}</p>
+        <div class="read-more">اقرأ المزيد ←</div>
+      </div>
+    </a>`).join('');
+}
+
+function renderTools() {
+  document.getElementById('toolsGrid').innerHTML = tools.map(t => `
+    <div class="tool-card">
+      <div class="tool-header">
+        <div class="tool-logo">${t.emoji}</div>
+        <div><h3>${t.name}</h3><span class="tool-badge">${t.badge}</span></div>
+      </div>
+      <p class="tool-desc">${t.desc}</p>
+      <a href="${t.url}" target="_blank" class="tool-btn">🔗 استعمل الأداة</a>
+    </div>`).join('');
+}
+
+function renderIncome() {
+  document.getElementById('incomeGrid').innerHTML = incomeMethods.map((m, i) => `
+    <div class="income-card" style="padding-top:52px;">
+      <div class="income-num">${i+1}</div>
+      <h3>${m.title}</h3>
+      <p>${m.desc}</p>
+      <div class="difficulty">
+        <span>الصعوبة:</span>
+        <div class="dots">
+          ${[1,2,3].map(d => `<div class="dot${d<=m.difficulty?' active':''}"></div>`).join('')}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// ============ PAGE NAVIGATION ============
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// ============ THEME ============
+function toggleTheme() {
+  const isDark = !document.documentElement.hasAttribute('data-theme');
+  document.documentElement.setAttribute('data-theme', isDark ? 'light' : '');
+  document.querySelector('.theme-btn').textContent = isDark ? '🌙' : '☀️';
+}
+
+// ============ MOBILE MENU ============
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ============ ACTIONS ============
+function subscribeNewsletter() {
+  alert('شكراً! تم الاشتراك في النشرة الإخبارية بنجاح 🎉');
+}
+function sendMessage() {
+  alert('تم إرسال رسالتك بنجاح! سنرد عليك خلال 24 ساعة 📧');
+}
+
+// ============ INIT ============
+renderBlog('homeBlogGrid', 6);
+renderBlog('fullBlogGrid');
+renderTools();
+renderIncome();
+</script>
+</body>
+</html>
